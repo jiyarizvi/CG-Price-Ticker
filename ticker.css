@@ -32,7 +32,7 @@
 .cg-item {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
     text-decoration: none;
     color: #333cee;
     font-weight: 600;
@@ -44,18 +44,14 @@
     border-radius: 50%;
 }
 
-.cg-symbol, .cg-price {
+.cg-symbol,
+.cg-price {
     color: #000;
 }
 
 #cg-advanced-ticker.cg-dark .cg-symbol,
 #cg-advanced-ticker.cg-dark .cg-price {
     color: #fff;
-}
-
-.cg-spark {
-    width: 80px;
-    height: 30px;
 }
 
 @keyframes ticker-scroll {
@@ -68,7 +64,7 @@
     .cg-ticker-inner {
         gap: 20px;
     }
-    .cg-price, .cg-change {
+    .cg-price {
         display: none;
     }
 }
