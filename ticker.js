@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     if (dark) el.classList.add("cg-dark");
 
-    // Fetch prices + sparkline
-    fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${coins.join(",")}&sparkline=true`)
+    // Fetch prices (no sparkline)
+    fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${coins.join(",")}`)
         .then(res => res.json())
         .then(data => {
             let html = `<div class="cg-ticker-inner">`;
@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
                         <span class="cg-symbol">${c.symbol.toUpperCase()}</span>
                         <span class="cg-price">$${c.current_price.toLocaleString()}</span>
                         <span class="cg-change" style="color:${color}">${change}%</span>
-                        <canvas class="cg-spark" data-points="${c.sparkline_in_7d.price.join(",")}"></canvas>
                     </a>
                 `;
             });
@@ -48,11 +47,5 @@ document.addEventListener("DOMContentLoaded", () => {
             const inner = el.querySelector(".cg-ticker-inner");
             el.addEventListener("mouseenter", () => inner.style.animationPlayState = "paused");
             el.addEventListener("mouseleave", () => inner.style.animationPlayState = "running");
-
-            // Render sparklines
-            document.querySelectorAll(".cg-spark").forEach(canvas => {
-                const points = canvas.dataset.points.split(",").map(Number);
-                drawSparkline(canvas, points);
-            });
         });
 });
