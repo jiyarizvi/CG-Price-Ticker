@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Coin Gazette - Advanced Crypto Ticker
  * Description: Minimalist, responsive crypto ticker with sparkline charts, theme auto-detect, hover-pause, and exchange logos.
- * Version: 2.0
+ * Version: 2.1
  * Author: Coin Gazette
  */
 
