@@ -19,7 +19,6 @@ class CG_Advanced_Ticker {
 
     public function enqueue_assets() {
         wp_enqueue_style('cg-ticker-style', plugin_dir_url(__FILE__) . 'ticker.css');
-        wp_enqueue_script('cg-sparkline', plugin_dir_url(__FILE__) . 'sparkline.js', [], null, true);
         wp_enqueue_script('cg-ticker-js', plugin_dir_url(__FILE__) . 'ticker.js', [], null, true);
 
         wp_localize_script('cg-ticker-js', 'CGTicker', [
