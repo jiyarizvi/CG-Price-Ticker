@@ -1,6 +1,6 @@
 # CG-Price-Ticker
 
-A lightweight, minimalist, fully responsive crypto price ticker for WordPress — designed with Coin Gazette’s editorial aesthetic, cobalt‑blue accents, and a clean white interface.
+A lightweight, minimalist, fully responsive crypto price ticker for WordPress — designed with the editorial aesthetic, cobalt‑blue accents, and a clean white interface.
 Displays live prices, logos, and 24h changes for any set of cryptocurrencies using the CoinGecko API.
 
 ## ✨ Features
